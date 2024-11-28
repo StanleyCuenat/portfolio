@@ -1,138 +1,518 @@
 import type { MetaFunction } from "@remix-run/node";
+import { System } from "~/ui";
+import { Button, COLORS, Link } from "~/ui/system";
+import { ALIGNMENT, FONT_WEIGHT, Typography } from "~/ui/system/Typography";
+import {
+  ExperienceCard,
+  GradientBg,
+  QualityCharterItem,
+  BlogItem,
+} from "~/ui/component";
+import { PulseBorder, TypingAnimation } from "~/ui/animation";
+import {
+  AlchemyIcon,
+  ArrowRightCircleIcon,
+  CalendarIcon,
+  CommitmentIcon,
+  FlexibilityIcon,
+} from "~/ui/icons";
+import {
+  deno,
+  firebase,
+  gcp,
+  github,
+  gleam,
+  hono,
+  linkedin,
+  malt,
+  nextjs,
+  react,
+  reactNative,
+  redux,
+  reduxLogo,
+  remixLogo,
+  tdd,
+  typescriptLogo,
+} from "~/ui/img";
+
+export const loader = async () => true;
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Stanislas Cuenat - Fullstack freelance developer" },
+    {
+      name: "Home page",
+      content:
+        "Stanislas Cuenat - Fullstack developer enjoying Functional programming, TDD and DDD. Building robust Web and Mobile applications from best practices with a dedication to understand your business.",
+    },
   ];
 };
 
 export default function Index() {
+  const STACK_LINK = [
+    {
+      name: "typescriptlang",
+      img: typescriptLogo,
+      href: "https://www.typescriptlang.org/",
+    },
+    {
+      name: "gleam",
+      img: gleam,
+      href: "https://gleam.run/",
+    },
+    {
+      name: "deno",
+      img: deno,
+      href: "https://deno.com/",
+    },
+    {
+      name: "gcp",
+      img: gcp,
+      href: "https://cloud.google.com",
+    },
+    {
+      name: "firebase",
+      img: firebase,
+      href: "https://firebase.google.com",
+    },
+    {
+      name: "hono",
+      img: hono,
+      href: "https://hono.dev/",
+    },
+    {
+      name: "react",
+      img: react,
+      href: "https://react.dev/",
+    },
+    {
+      name: "react native",
+      img: reactNative,
+      href: "https://expo.dev/",
+    },
+    {
+      name: "next.JS",
+      img: nextjs,
+      href: "https://nextjs.org/",
+    },
+    {
+      name: "redux",
+      img: reduxLogo,
+      href: "https://redux-toolkit.js.org/",
+    },
+    {
+      name: "remix",
+      img: remixLogo,
+      href: "https://remix.run/",
+    },
+  ];
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className="flex flex-col items-center gap-16">
-        <header className="flex flex-col items-center gap-9">
-          <h1 className="leading text-2xl font-bold text-gray-800 dark:text-gray-100">
-            Welcome to <span className="sr-only">Remix</span>
-          </h1>
-          <div className="h-[144px] w-[434px]">
-            <img
-              src="/logo-light.png"
-              alt="Remix"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src="/logo-dark.png"
-              alt="Remix"
-              className="hidden w-full dark:block"
-            />
+    <div className="container mx-auto px-4 2xl:px-40">
+      <div className="flex flex-col gap-24 md:gap-40 lg:my-24 z-10">
+        <header className="flex flex-row">
+          <div className="flex flex-col gap-7">
+            <div className="flex flex-col gap-4">
+              <System.Typography
+                type={System.TYPOGRAPHY.H1}
+                color={System.COLORS.BLACK}
+                weight={FONT_WEIGHT.EXTRA_BOLD}
+              >
+                Stanislas Cuenat
+              </System.Typography>
+
+              <TypingAnimation
+                text="Fullstack Freelance Engineer"
+                withParent={(children) => (
+                  <System.Typography
+                    type={System.TYPOGRAPHY.H1}
+                    color={System.COLORS.RED}
+                    weight={FONT_WEIGHT.EXTRA_BOLD}
+                  >
+                    {children}
+                  </System.Typography>
+                )}
+              />
+            </div>
+            <System.Typography
+              type={System.TYPOGRAPHY.SUB}
+              color={System.COLORS.BLACK}
+              weight={FONT_WEIGHT.REGULAR}
+              className="max-w-[600px]"
+            >
+              Fullstack engineer enjoying Functional programming with{" "}
+              <TypingAnimation
+                text="TDD and DDD"
+                withParent={(children) => (
+                  <System.Typography
+                    type={System.TYPOGRAPHY.EMPHASE}
+                    color={System.COLORS.BLACK}
+                    weight={FONT_WEIGHT.EXTRA_BOLD}
+                  >
+                    {children}
+                  </System.Typography>
+                )}
+              />
+              . Building{" "}
+              <TypingAnimation
+                text="robust"
+                withParent={(children) => (
+                  <System.Typography
+                    type={System.TYPOGRAPHY.EMPHASE}
+                    color={System.COLORS.BLACK}
+                    weight={FONT_WEIGHT.EXTRA_BOLD}
+                  >
+                    {children}
+                  </System.Typography>
+                )}
+              />{" "}
+              Web and Mobile applications from best practices with a dedication
+              to{" "}
+              <TypingAnimation
+                text="understand your business."
+                withParent={(children) => (
+                  <System.Typography
+                    type={System.TYPOGRAPHY.EMPHASE}
+                    color={System.COLORS.BLACK}
+                    weight={FONT_WEIGHT.EXTRA_BOLD}
+                  >
+                    {children}
+                  </System.Typography>
+                )}
+              />
+            </System.Typography>
+            <div className="flex flex-row gap-x-8">
+              <div className="flex flex-col">
+                <Typography
+                  color={COLORS.BLACK}
+                  type={System.TYPOGRAPHY.H1}
+                  weight={FONT_WEIGHT.EXTRA_BOLD}
+                  alignment={ALIGNMENT.LEFT}
+                >
+                  +6
+                </Typography>
+                <Typography
+                  color={COLORS.GREY}
+                  type={System.TYPOGRAPHY.CONTENT}
+                  weight={FONT_WEIGHT.LIGHT}
+                  alignment={ALIGNMENT.LEFT}
+                >
+                  Year Of Experience
+                </Typography>
+              </div>
+              <div className="flex flex-col">
+                <Typography
+                  color={COLORS.BLACK}
+                  type={System.TYPOGRAPHY.H1}
+                  weight={FONT_WEIGHT.EXTRA_BOLD}
+                  alignment={ALIGNMENT.LEFT}
+                >
+                  +9
+                </Typography>
+                <Typography
+                  color={COLORS.GREY}
+                  type={System.TYPOGRAPHY.CONTENT}
+                  weight={FONT_WEIGHT.LIGHT}
+                  alignment={ALIGNMENT.LEFT}
+                >
+                  Projects Completed
+                </Typography>
+              </div>
+              <div className="flex flex-col">
+                <Typography
+                  color={COLORS.BLACK}
+                  type={System.TYPOGRAPHY.H1}
+                  weight={FONT_WEIGHT.EXTRA_BOLD}
+                  alignment={ALIGNMENT.LEFT}
+                >
+                  +7
+                </Typography>
+                <Typography
+                  color={COLORS.GREY}
+                  type={System.TYPOGRAPHY.CONTENT}
+                  weight={FONT_WEIGHT.LIGHT}
+                  alignment={ALIGNMENT.LEFT}
+                >
+                  Worldwilde customer
+                </Typography>
+              </div>
+            </div>
+            <div className="flex flex-row gap-5">
+              <PulseBorder
+                className="rounded-full"
+                colors={["#ff4545", "#00ff99", "#006aff", "#ff0095", "#ff4545"]}
+              >
+                <Link
+                  rel="noreferrer"
+                  target="_blank"
+                  to="https://linkedin.com/in/stanislas-cuenat-8939b3110"
+                  className="no-underline"
+                >
+                  <Button color={COLORS.BLACK} className="z-20">
+                    Contact me
+                  </Button>
+                </Link>
+              </PulseBorder>
+              <Link
+                rel="noreferrer"
+                target="_blank"
+                to="https://malt.fr/profile/stanislascuenat"
+                className="w-[40px] h-[40px] rounded-full bg-main-red duration-200 hover:shadow-md cursor-pointer z-10"
+              >
+                <img
+                  src={malt}
+                  className="object-contain rounded-full"
+                  alt="malt profile page"
+                />
+              </Link>
+              <Link
+                rel="noreferrer"
+                target="_blank"
+                to="https://linkedin.com/in/stanislas-cuenat-8939b3110"
+                className="w-[40px] h-[40px] duration-200 hover:shadow-md cursor-pointer rounded-full z-10"
+              >
+                <img
+                  src={linkedin}
+                  className="object-fit"
+                  alt="linkedin profile page"
+                />
+              </Link>
+              <Link
+                rel="noreferrer"
+                target="_blank"
+                to="https://github.com/StanleyCuenat"
+                className="w-[40px] h-[40px] duration-200 hover:shadow-md cursor-pointer rounded-full z-10"
+              >
+                <img
+                  src={github}
+                  className="object-fit"
+                  alt="github profile page"
+                />
+              </Link>
+            </div>
           </div>
         </header>
-        <nav className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
-          <p className="leading-6 text-gray-700 dark:text-gray-200">
-            What&apos;s next?
-          </p>
-          <ul>
-            {resources.map(({ href, text, icon }) => (
-              <li key={href}>
-                <a
-                  className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {icon}
-                  {text}
-                </a>
-              </li>
+        <section className="flex flex-col gap-7">
+          <System.Typography
+            type={System.TYPOGRAPHY.H2}
+            color={System.COLORS.BLACK}
+            weight={FONT_WEIGHT.EXTRA_BOLD}
+          >
+            About me
+          </System.Typography>
+          <div className="flex flex-col gap-3 max-w-[800px]">
+            <System.Typography
+              type={System.TYPOGRAPHY.CONTENT}
+              color={System.COLORS.GREY}
+              weight={FONT_WEIGHT.REGULAR}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu
+              sapien a turpis vestibulum consequat. Fusce accumsan libero vitae
+              massa dapibus bibendum. Fusce condimentum dapibus lacus nec
+              dictum. Phasellus sit amet urna tincidunt, posuere turpis eget,
+              fringilla neque. Quisque sit amet erat eros. In ac velit non
+              tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales
+              porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet
+              pulvinar. Aliquam id justo vestibulum, viverra quam sit amet,
+              maximus ipsum. Aliquam lacinia nunc nec consequat porttitor.
+            </System.Typography>
+          </div>
+        </section>
+        <section className="flex flex-col gap-7">
+          <System.Typography
+            type={System.TYPOGRAPHY.H2}
+            color={System.COLORS.BLACK}
+            weight={FONT_WEIGHT.EXTRA_BOLD}
+          >
+            My technical stack
+          </System.Typography>
+          <Typography
+            type={System.TYPOGRAPHY.CONTENT}
+            color={System.COLORS.GREY}
+            weight={FONT_WEIGHT.REGULAR}
+            className="max-w-[800px]"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu
+            sapien a turpis vestibulum consequat. Fusce accumsan libero vitae
+            massa dapibus bibendum. Fusce condimentum dapibus lacus nec dictum.
+            Phasellus sit amet urna tincidunt
+          </Typography>
+          <div className="flex flex-row flex-wrap gap-4 z-10 max-w-[800px] ">
+            {STACK_LINK.map((stack) => (
+              <a
+                key={stack.name}
+                href={stack.href}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full hover:shadow-card duration-200 w-24 h-24 flex items-center justify-center"
+              >
+                <img
+                  src={stack.img}
+                  alt={stack.name}
+                  className="w-20 h-20 object-contain"
+                />
+              </a>
             ))}
-          </ul>
-        </nav>
+          </div>
+        </section>
+
+        <section className="flex flex-col gap-7">
+          <System.Typography
+            type={System.TYPOGRAPHY.H2}
+            color={System.COLORS.BLACK}
+            weight={FONT_WEIGHT.EXTRA_BOLD}
+          >
+            Quality Charter for my delivery
+          </System.Typography>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 z-20">
+            <QualityCharterItem
+              icon={<CalendarIcon className="text-white w-6 h-6" />}
+              title="Daily Delivery"
+              content="See everyday almost in real time how your product
+                  evolve."
+            />
+            <QualityCharterItem
+              icon={<AlchemyIcon className="text-white w-6 h-6" />}
+              title="Fully Tested"
+              content="With TDD (Test Driven Development) your code will be totally
+                  and deeply tested."
+            />
+            <QualityCharterItem
+              icon={<FlexibilityIcon className="text-white w-6 h-6" />}
+              title="Flexibility"
+              content="Flexibility on expected scopes (need to pivot? No problem! An
+                  emergency? We’ll change direction)."
+            />
+
+            <QualityCharterItem
+              icon={<CommitmentIcon className="text-white w-6 h-6" />}
+              title="Commitment"
+              content="Someone truly committed in your project, Trying before
+                  everything to understand your Business domain."
+            />
+          </div>
+        </section>
+        <section className="flex flex-col gap-7">
+          <System.Typography
+            type={System.TYPOGRAPHY.H2}
+            color={System.COLORS.BLACK}
+            weight={FONT_WEIGHT.EXTRA_BOLD}
+          >
+            Blog
+          </System.Typography>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <BlogItem
+              href="/blog/redux"
+              img={redux}
+              title="Redux is not about caching"
+              preview="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex dolor, pellentesque nec odio vel, venenatis dictum lacus..."
+            />
+            <BlogItem
+              href="/blog/tdd"
+              img={tdd}
+              title="Why TDD help you go fast"
+              preview="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex dolor, pellentesque nec odio vel, venenatis dictum lacus..."
+            />
+            <BlogItem
+              href="/blog/fp"
+              img={redux}
+              title="Functional programming for business logic"
+              preview="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex dolor, pellentesque nec odio vel, venenatis dictum lacus..."
+            />
+          </div>
+          <Link to="/blog" className="ml-auto" target="_self">
+            See more <ArrowRightCircleIcon className="h-6 w-6 ml-2" />
+          </Link>
+        </section>
+
+        <section className="flex flex-col gap-7">
+          <System.Typography
+            type={System.TYPOGRAPHY.H2}
+            color={System.COLORS.BLACK}
+            weight={FONT_WEIGHT.EXTRA_BOLD}
+          >
+            Experiences
+          </System.Typography>
+          <div className="flex flex-col gap-5">
+            <ExperienceCard
+              title="NomadHer - Head Of Tech"
+              dateStart="April 2022"
+              dateEnd="November 2023"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu sapien a turpis vestibulum consequat. Fusce accumsan libero vitae massa dapibus bibendum. Fusce condimentum dapibus lacus nec dictum. Phasellus sit amet urna tincidunt, posuere turpis eget, fringilla neque. Quisque sit amet erat eros. In ac velit non tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet pulvinar. Aliquam id justo vestibulum, viverra quam sit amet, maximus ipsum. Aliquam lacinia nunc nec consequat porttitor."
+              competences={[
+                "React",
+                "React Native",
+                "Redux",
+                "RTK",
+                "Nest.JS",
+                "GCP",
+                "Firebase",
+                "Firestore",
+                "ElasticSearch",
+                "TDD",
+              ]}
+            />
+            <ExperienceCard
+              title="NomadHer - Head Of Tech"
+              dateStart="April 2022"
+              dateEnd="November 2023"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu sapien a turpis vestibulum consequat. Fusce accumsan libero vitae massa dapibus bibendum. Fusce condimentum dapibus lacus nec dictum. Phasellus sit amet urna tincidunt, posuere turpis eget, fringilla neque. Quisque sit amet erat eros. In ac velit non tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet pulvinar. Aliquam id justo vestibulum, viverra quam sit amet, maximus ipsum. Aliquam lacinia nunc nec consequat porttitor."
+              competences={[
+                "React",
+                "React Native",
+                "Redux",
+                "RTK",
+                "Nest.JS",
+                "GCP",
+                "Firebase",
+                "Firestore",
+                "ElasticSearch",
+                "TDD",
+              ]}
+            />
+            <ExperienceCard
+              title="NomadHer - Head Of Tech"
+              dateStart="April 2022"
+              dateEnd="November 2023"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu sapien a turpis vestibulum consequat. Fusce accumsan libero vitae massa dapibus bibendum. Fusce condimentum dapibus lacus nec dictum. Phasellus sit amet urna tincidunt, posuere turpis eget, fringilla neque. Quisque sit amet erat eros. In ac velit non tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet pulvinar. Aliquam id justo vestibulum, viverra quam sit amet, maximus ipsum. Aliquam lacinia nunc nec consequat porttitor."
+              competences={[
+                "React",
+                "React Native",
+                "Redux",
+                "RTK",
+                "Nest.JS",
+                "GCP",
+                "Firebase",
+                "Firestore",
+                "ElasticSearch",
+                "TDD",
+              ]}
+            />
+            <ExperienceCard
+              title="NomadHer - Head Of Tech"
+              dateStart="April 2022"
+              dateEnd="November 2023"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu sapien a turpis vestibulum consequat. Fusce accumsan libero vitae massa dapibus bibendum. Fusce condimentum dapibus lacus nec dictum. Phasellus sit amet urna tincidunt, posuere turpis eget, fringilla neque. Quisque sit amet erat eros. In ac velit non tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet pulvinar. Aliquam id justo vestibulum, viverra quam sit amet, maximus ipsum. Aliquam lacinia nunc nec consequat porttitor."
+              competences={[
+                "React",
+                "React Native",
+                "Redux",
+                "RTK",
+                "Nest.JS",
+                "GCP",
+                "Firebase",
+                "Firestore",
+                "ElasticSearch",
+                "TDD",
+              ]}
+            />
+          </div>
+        </section>
       </div>
+      <GradientBg position="top-[-387px] left-[-387px]" />
+      <GradientBg position="top-[800px] right-[-600px] bg-custom-dot bg-[length:4px_4px]" />
+      <GradientBg position="top-[1800px] left-[-387px]" />
+      <GradientBg position="bottom-[200px] right-[-600px]" />
+      <GradientBg position="bottom-[200px] left-[87px]" />
     </div>
   );
 }
-
-const resources = [
-  {
-    href: "https://remix.run/start/quickstart",
-    text: "Quick Start (5 min)",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M8.51851 12.0741L7.92592 18L15.6296 9.7037L11.4815 7.33333L12.0741 2L4.37036 10.2963L8.51851 12.0741Z"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    href: "https://remix.run/start/tutorial",
-    text: "Tutorial (30 min)",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M4.561 12.749L3.15503 14.1549M3.00811 8.99944H1.01978M3.15503 3.84489L4.561 5.2508M8.3107 1.70923L8.3107 3.69749M13.4655 3.84489L12.0595 5.2508M18.1868 17.0974L16.635 18.6491C16.4636 18.8205 16.1858 18.8205 16.0144 18.6491L13.568 16.2028C13.383 16.0178 13.0784 16.0347 12.915 16.239L11.2697 18.2956C11.047 18.5739 10.6029 18.4847 10.505 18.142L7.85215 8.85711C7.75756 8.52603 8.06365 8.21994 8.39472 8.31453L17.6796 10.9673C18.0223 11.0653 18.1115 11.5094 17.8332 11.7321L15.7766 13.3773C15.5723 13.5408 15.5554 13.8454 15.7404 14.0304L18.1868 16.4767C18.3582 16.6481 18.3582 16.926 18.1868 17.0974Z"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    href: "https://remix.run/docs",
-    text: "Remix Docs",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M9.99981 10.0751V9.99992M17.4688 17.4688C15.889 19.0485 11.2645 16.9853 7.13958 12.8604C3.01467 8.73546 0.951405 4.11091 2.53116 2.53116C4.11091 0.951405 8.73546 3.01467 12.8604 7.13958C16.9853 11.2645 19.0485 15.889 17.4688 17.4688ZM2.53132 17.4688C0.951566 15.8891 3.01483 11.2645 7.13974 7.13963C11.2647 3.01471 15.8892 0.951453 17.469 2.53121C19.0487 4.11096 16.9854 8.73551 12.8605 12.8604C8.73562 16.9853 4.11107 19.0486 2.53132 17.4688Z"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    href: "https://rmx.as/discord",
-    text: "Join Discord",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 24 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M15.0686 1.25995L14.5477 1.17423L14.2913 1.63578C14.1754 1.84439 14.0545 2.08275 13.9422 2.31963C12.6461 2.16488 11.3406 2.16505 10.0445 2.32014C9.92822 2.08178 9.80478 1.84975 9.67412 1.62413L9.41449 1.17584L8.90333 1.25995C7.33547 1.51794 5.80717 1.99419 4.37748 2.66939L4.19 2.75793L4.07461 2.93019C1.23864 7.16437 0.46302 11.3053 0.838165 15.3924L0.868838 15.7266L1.13844 15.9264C2.81818 17.1714 4.68053 18.1233 6.68582 18.719L7.18892 18.8684L7.50166 18.4469C7.96179 17.8268 8.36504 17.1824 8.709 16.4944L8.71099 16.4904C10.8645 17.0471 13.128 17.0485 15.2821 16.4947C15.6261 17.1826 16.0293 17.8269 16.4892 18.4469L16.805 18.8725L17.3116 18.717C19.3056 18.105 21.1876 17.1751 22.8559 15.9238L23.1224 15.724L23.1528 15.3923C23.5873 10.6524 22.3579 6.53306 19.8947 2.90714L19.7759 2.73227L19.5833 2.64518C18.1437 1.99439 16.6386 1.51826 15.0686 1.25995ZM16.6074 10.7755L16.6074 10.7756C16.5934 11.6409 16.0212 12.1444 15.4783 12.1444C14.9297 12.1444 14.3493 11.6173 14.3493 10.7877C14.3493 9.94885 14.9378 9.41192 15.4783 9.41192C16.0471 9.41192 16.6209 9.93851 16.6074 10.7755ZM8.49373 12.1444C7.94513 12.1444 7.36471 11.6173 7.36471 10.7877C7.36471 9.94885 7.95323 9.41192 8.49373 9.41192C9.06038 9.41192 9.63892 9.93712 9.6417 10.7815C9.62517 11.6239 9.05462 12.1444 8.49373 12.1444Z"
-          strokeWidth="1.5"
-        />
-      </svg>
-    ),
-  },
-];
