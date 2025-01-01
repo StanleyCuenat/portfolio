@@ -10,7 +10,7 @@ export const TypingAnimation = ({ text, withParent }: TypingAnimationProps) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
   return withParent(
-    <div ref={ref} className="inline">
+    <span ref={ref} className="inline">
       {text.split("").map((letter, index) => (
         <motion.span
           key={index}
@@ -21,6 +21,6 @@ export const TypingAnimation = ({ text, withParent }: TypingAnimationProps) => {
           {letter}
         </motion.span>
       ))}
-    </div>
+    </span>
   );
 };

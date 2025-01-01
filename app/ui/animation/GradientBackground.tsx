@@ -15,6 +15,7 @@ export const GradientBackground = (props: GradientBackgroundProps) => {
     return `conic-gradient(from ${r / 4}deg, ${props.colors.join(", ")})`;
   });
 
+  console.log('reset??')
   return (
     <div className={`relative self-start ${props.className ?? ""}`}>
       <motion.div

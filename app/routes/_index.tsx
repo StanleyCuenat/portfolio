@@ -111,7 +111,7 @@ export default function Index() {
       <div className="flex flex-col gap-24 md:gap-40 lg:my-24 z-10">
         <header className="flex flex-row">
           <div className="flex flex-col gap-7">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
               <System.Typography
                 type={System.TYPOGRAPHY.H1}
                 color={System.COLORS.BLACK}
@@ -124,7 +124,7 @@ export default function Index() {
                 text="Fullstack Freelance Engineer"
                 withParent={(children) => (
                   <System.Typography
-                    type={System.TYPOGRAPHY.H1}
+                    type={System.TYPOGRAPHY.H2}
                     color={System.COLORS.RED}
                     weight={FONT_WEIGHT.EXTRA_BOLD}
                   >
@@ -134,7 +134,7 @@ export default function Index() {
               />
             </div>
             <System.Typography
-              type={System.TYPOGRAPHY.SUB}
+              type={System.TYPOGRAPHY.CONTENT}
               color={System.COLORS.BLACK}
               weight={FONT_WEIGHT.REGULAR}
               className="max-w-[600px]"
@@ -305,15 +305,7 @@ export default function Index() {
               color={System.COLORS.GREY}
               weight={FONT_WEIGHT.REGULAR}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu
-              sapien a turpis vestibulum consequat. Fusce accumsan libero vitae
-              massa dapibus bibendum. Fusce condimentum dapibus lacus nec
-              dictum. Phasellus sit amet urna tincidunt, posuere turpis eget,
-              fringilla neque. Quisque sit amet erat eros. In ac velit non
-              tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales
-              porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet
-              pulvinar. Aliquam id justo vestibulum, viverra quam sit amet,
-              maximus ipsum. Aliquam lacinia nunc nec consequat porttitor.
+              French Freelance Engineer based in Seoul, South Korea. With more than 6 years of experiences I dedicated my career into web and mobile development. I mainly worked for startup ()
             </System.Typography>
           </div>
         </section>
@@ -434,21 +426,41 @@ export default function Index() {
           </System.Typography>
           <div className="flex flex-col gap-5">
             <ExperienceCard
-              title="NomadHer - Head Of Tech"
-              dateStart="April 2022"
-              dateEnd="November 2023"
+              title="Freelance - Fullstack engineer"
+              dateStart="June 2024"
+              dateEnd="Now"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu sapien a turpis vestibulum consequat. Fusce accumsan libero vitae massa dapibus bibendum. Fusce condimentum dapibus lacus nec dictum. Phasellus sit amet urna tincidunt, posuere turpis eget, fringilla neque. Quisque sit amet erat eros. In ac velit non tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet pulvinar. Aliquam id justo vestibulum, viverra quam sit amet, maximus ipsum. Aliquam lacinia nunc nec consequat porttitor."
               competences={[
                 "React",
                 "React Native",
+                "Next.JS",
                 "Redux",
                 "RTK",
                 "Nest.JS",
                 "GCP",
+                "AWS",
                 "Firebase",
                 "Firestore",
                 "ElasticSearch",
                 "TDD",
+              ]}
+            />
+            <ExperienceCard
+              title="SicPama - Fullstack engineer"
+              dateStart="November 2023"
+              dateEnd="June 2024"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu sapien a turpis vestibulum consequat. Fusce accumsan libero vitae massa dapibus bibendum. Fusce condimentum dapibus lacus nec dictum. Phasellus sit amet urna tincidunt, posuere turpis eget, fringilla neque. Quisque sit amet erat eros. In ac velit non tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet pulvinar. Aliquam id justo vestibulum, viverra quam sit amet, maximus ipsum. Aliquam lacinia nunc nec consequat porttitor."
+              competences={[
+                "React",
+                "Next.JS",
+                "Zustand",
+                "Node.JS",
+                "TDD",
+                "AWS",
+                "FingerPrint",
+                "Websocket",
+                "PostgreSQL",
+                "Responsive Design",
               ]}
             />
             <ExperienceCard
@@ -470,39 +482,37 @@ export default function Index() {
               ]}
             />
             <ExperienceCard
-              title="NomadHer - Head Of Tech"
-              dateStart="April 2022"
-              dateEnd="November 2023"
+              title="Innosonian - Lead Frontend"
+              dateStart="September 2020"
+              dateEnd="April 2022"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu sapien a turpis vestibulum consequat. Fusce accumsan libero vitae massa dapibus bibendum. Fusce condimentum dapibus lacus nec dictum. Phasellus sit amet urna tincidunt, posuere turpis eget, fringilla neque. Quisque sit amet erat eros. In ac velit non tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet pulvinar. Aliquam id justo vestibulum, viverra quam sit amet, maximus ipsum. Aliquam lacinia nunc nec consequat porttitor."
               competences={[
                 "React",
-                "React Native",
                 "Redux",
-                "RTK",
-                "Nest.JS",
-                "GCP",
-                "Firebase",
-                "Firestore",
-                "ElasticSearch",
+                "Redux Saga",
+                "Web Bluetooth",
+                "WebRTC",
+                "Realtime",
                 "TDD",
+                "MySQL",
+                "Swift"
               ]}
             />
-            <ExperienceCard
-              title="NomadHer - Head Of Tech"
-              dateStart="April 2022"
-              dateEnd="November 2023"
+<ExperienceCard
+              title="Freelance - Fullstack engineer"
+              dateStart="September 2018"
+              dateEnd="September 2020"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu sapien a turpis vestibulum consequat. Fusce accumsan libero vitae massa dapibus bibendum. Fusce condimentum dapibus lacus nec dictum. Phasellus sit amet urna tincidunt, posuere turpis eget, fringilla neque. Quisque sit amet erat eros. In ac velit non tellus volutpat gravida eu nec nisl. Proin tempus erat sed sodales porta. Quisque sed tortor dui. Nunc sodales ac ante sit amet pulvinar. Aliquam id justo vestibulum, viverra quam sit amet, maximus ipsum. Aliquam lacinia nunc nec consequat porttitor."
               competences={[
                 "React",
-                "React Native",
                 "Redux",
-                "RTK",
-                "Nest.JS",
-                "GCP",
-                "Firebase",
-                "Firestore",
-                "ElasticSearch",
+                "Redux Saga",
+                "AWS",
+                "Node.JS",
+                "PostgreSQL",
+                "Express.JS",
                 "TDD",
+                "Webhook"
               ]}
             />
           </div>
