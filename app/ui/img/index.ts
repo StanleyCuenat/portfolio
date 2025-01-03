@@ -17,7 +17,14 @@ import hono from "./hono.png";
 import remixLogo from "./remix.png";
 import typescriptLogo from "./typescript.svg";
 import stanLogo from "./stan-logo.svg";
+import packativeHome from "./packative-home.png";
+import nomadherHome from "./nomadher-home.png";
+import innosonianHome from "./innosonian-home.png";
+import jobypepperHome from "./jobypepper-home.png";
 export {
+  jobypepperHome,
+  innosonianHome,
+  nomadherHome,
   stanLogo,
   typescriptLogo,
   remixLogo,
@@ -37,4 +44,5 @@ export {
   gleam,
   gcp,
   firebase,
+  packativeHome,
 };

@@ -4,3 +4,4 @@ export { NavBar } from "./Navbar";
 export { QualityCharterItem } from "./QualityCharterList";
 export { BlogItem } from "./BlogItem";
 export { Footer } from "./Footer";
+export { PortfolioCard } from "./PortfolioCard";

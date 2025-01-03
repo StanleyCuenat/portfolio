@@ -8,6 +8,7 @@ type ExperienceCard = {
   dateEnd: string;
   content: string;
   competences: string[];
+  link: string;
 };
 export const ExperienceCard = (props: ExperienceCard) => {
   const [margin, setMargin] = useState("lg:ml-0");
@@ -18,6 +19,10 @@ export const ExperienceCard = (props: ExperienceCard) => {
     }
     setMargin(entries[0]?.isIntersecting ? "lg:ml-4 shadow-card" : "lg:ml-0");
   }, []);
+
+  const handleClick = useCallback(() => {
+    window.open(props.link, "_blanck");
+  }, [props.link]);
 
   useEffect(() => {
     const copyRef = ref.current;
@@ -37,6 +42,7 @@ export const ExperienceCard = (props: ExperienceCard) => {
 
   return (
     <div
+      onClick={handleClick}
       className={`relative flex flex-col gap-4 rounded-md  group p-6  bg-white duration-200 z-20 max-w-[900px] ${margin} cursor-pointer  max-w-[750px]`}
       ref={ref}
     >
@@ -62,6 +68,7 @@ export const ExperienceCard = (props: ExperienceCard) => {
           color={COLORS.BLACK}
           type={TYPOGRAPHY.CONTENT}
           weight={FONT_WEIGHT.REGULAR}
+          className="whitespace-pre-line"
         >
           {props.content}
         </Typography>
