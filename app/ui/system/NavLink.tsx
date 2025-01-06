@@ -57,7 +57,7 @@ const handleButtonTextColor = (color: COLORS) => {
 
 const NavLinkButton = (props: NavLinkProps) => {
   const BASE_STYLE =
-    "rounded-full py-1.5 px-4 font-bold cursor-pointer relative duration-200";
+    "rounded-md py-1.5 px-4 font-bold cursor-pointer relative duration-200";
   const handleStyles = useCallback(
     (isActive: boolean) => {
       const style = isActive

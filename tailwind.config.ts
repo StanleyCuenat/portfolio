@@ -18,6 +18,7 @@ export default {
         ],
       },
       colors: {
+        "main-yellow": "#f5f5f0",
         "main-red": "#66edc7",
         "sub-red": "#4ad9b0",
         "main-black": "#3A343E",

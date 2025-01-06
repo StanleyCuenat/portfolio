@@ -10,7 +10,7 @@ type BlogItemProps = {
 
 export const BlogItem = (props: BlogItemProps) => {
   return (
-    <div className="flex flex-col bg-white z-20 rounded-2xl hover:shadow-card grow duration-200">
+    <div className="flex flex-col bg-white z-20 rounded-2xl  hover:shadow-card grow duration-200">
       <NavLink to={props.href} className="flex flex-col h-full grow">
         <img
           src={props.img}

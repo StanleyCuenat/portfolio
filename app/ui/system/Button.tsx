@@ -44,7 +44,7 @@ export const Button = (props: ButtonProps) => {
     handleTextColor(props.color),
     handleBgColor(props.color),
     handleHoverColor(props.color),
-    "rounded-full py-1.5 px-4 font-bold cursor-pointer relative duration-200",
+    "flex rounded-md py-1.5 px-4 font-bold cursor-pointer relative duration-200",
     props.className ?? "",
   ].join(" ");
   return <button className={style}>{props.children}</button>;

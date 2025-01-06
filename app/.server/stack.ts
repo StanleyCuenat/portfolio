@@ -19,57 +19,52 @@ export type StackLinkItems = {
 };
 const STACK_LINK: StackLinkItems[] = [
   {
-    name: "typescriptlang",
+    name: "Typescript",
     img: typescriptLogo,
     href: "https://www.typescriptlang.org/",
   },
   {
-    name: "gleam",
+    name: "Gleam",
     img: gleam,
     href: "https://gleam.run/",
   },
   {
-    name: "deno",
+    name: "Deno",
     img: deno,
     href: "https://deno.com/",
   },
   {
-    name: "gcp",
+    name: "GCP",
     img: gcp,
     href: "https://cloud.google.com",
   },
   {
-    name: "firebase",
+    name: "Firebase",
     img: firebase,
     href: "https://firebase.google.com",
   },
   {
-    name: "hono",
+    name: "Hono",
     img: hono,
     href: "https://hono.dev/",
   },
   {
-    name: "react",
+    name: "React",
     img: react,
     href: "https://react.dev/",
   },
   {
-    name: "react native",
-    img: reactNative,
-    href: "https://expo.dev/",
-  },
-  {
-    name: "next.JS",
+    name: "Next.JS",
     img: nextjs,
     href: "https://nextjs.org/",
   },
   {
-    name: "redux",
+    name: "Redux",
     img: reduxLogo,
     href: "https://redux-toolkit.js.org/",
   },
   {
-    name: "remix",
+    name: "Remix",
     img: remixLogo,
     href: "https://remix.run/",
   },

@@ -5,3 +5,5 @@ export { QualityCharterItem } from "./QualityCharterList";
 export { BlogItem } from "./BlogItem";
 export { Footer } from "./Footer";
 export { PortfolioCard } from "./PortfolioCard";
+export { HomeSection } from "./HomeSection";
+export { ServiceSection } from "./ServiceSection";

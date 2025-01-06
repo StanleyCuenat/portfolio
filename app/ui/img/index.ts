@@ -21,7 +21,9 @@ import packativeHome from "./packative-home.png";
 import nomadherHome from "./nomadher-home.png";
 import innosonianHome from "./innosonian-home.png";
 import jobypepperHome from "./jobypepper-home.png";
+import profile from "./profile.png";
 export {
+  profile,
   jobypepperHome,
   innosonianHome,
   nomadherHome,
