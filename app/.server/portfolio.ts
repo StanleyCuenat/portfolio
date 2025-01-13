@@ -5,6 +5,7 @@ import {
   jobypepperHome,
   nomadherHome,
   packativeHome,
+  sicpama,
   smartMeUpLogo,
 } from "~/ui/img";
 
@@ -30,10 +31,11 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     url: "https://www.packative.com",
     intro:
       "Packative is a young startup striving to revolutionize the packaging industry in South Korea. Through their applications, they aim to help small and medium-sized businesses easily create and order custom-designed packaging.",
-    type: "Web development",
+    type: "Frontend & Backend",
     challenge: "",
     result: "",
   },
+
   {
     id: "nomadher",
     title: "NomadHer",
@@ -56,7 +58,7 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     url: "https://www.innosonian.global",
     intro:
       "Innosonian is a leading provider of connected CPR manikins in Asia. Developing their web and mobile applications for use with these manikins, as well as their online class training system, presented significant challenges as a developer.",
-    type: "Web development",
+    type: "Frontend & Backend",
     challenge: "",
     result: "",
   },
@@ -69,7 +71,7 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     url: "https://www.jobypepper.com",
     intro:
       "JobyPepper is the leading SaaS platform for student jobs in France. The company provides all the tools students and companies need to find jobs and manage billing. As a developer during the company's early stages, it was an incredible experience to work on a variety of topics.",
-    type: "Web development",
+    type: "Frontend & Backend",
     challenge: "",
     result: "",
   },
@@ -81,8 +83,8 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     imgs: [smartMeUpLogo],
     url: "https://www.marelli.com/",
     intro:
-      "JobyPepper is the leading SaaS platform for student jobs in France. The company provides all the tools students and companies need to find jobs and manage billing. As a developer during the company's early stages, it was an incredible experience to work on a variety of topics.",
-    type: "Web development",
+      "SmartMeUp, founded in 2012 and based in Meylan, France, specialized in developing perception software for autonomous driving, focusing on low-power object detection and 3D environment modeling. With my help we created an admin dashboard and reviewed their anotation plateform and system",
+    type: "Frontend & Backend",
     challenge: "",
     result: "",
   },
@@ -95,7 +97,20 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     url: "https://www.marelli.com/",
     intro:
       "JobyPepper is the leading SaaS platform for student jobs in France. The company provides all the tools students and companies need to find jobs and manage billing. As a developer during the company's early stages, it was an incredible experience to work on a variety of topics.",
-    type: "Web development",
+    type: "Frontend & Backend",
+    challenge: "",
+    result: "",
+  },
+  {
+    id: "sicpama",
+    title: "SicPama",
+    imgs: [sicpama],
+    date: "November 2023 - June 2024",
+    description: "Order solution for F&B",
+    url: "https://www.sicpama.com/",
+    type: "Frontend & Backend",
+    intro:
+      "SicPama is a South Korean startup founded in 2021, specializing in QR code-based ordering and payment systems for the restaurant industry. Their platform enables customers to place joint orders and choose payment options without the need for additional hardware, enhancing operational efficiency for restaurant owners",
     challenge: "",
     result: "",
   },
@@ -108,7 +123,7 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     url: "https://fr.linkedin.com/company/deescut",
     intro:
       "JobyPepper is the leading SaaS platform for student jobs in France. The company provides all the tools students and companies need to find jobs and manage billing. As a developer during the company's early stages, it was an incredible experience to work on a variety of topics.",
-    type: "Frontend development",
+    type: "Frontend",
     challenge: "",
     result: "",
   },

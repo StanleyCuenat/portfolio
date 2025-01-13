@@ -26,7 +26,11 @@ import hetchr from "./hetchr.png";
 import hetchrLogo from "./hetchr-logo.jpg";
 import deescut from "./deescut.png";
 import smartMeUpLogo from "./smart-me-up-logo.png";
+import sicpamaLogo from "./sicpama-logo.png";
+import sicpama from "./sicpama.png";
 export {
+  sicpama,
+  sicpamaLogo,
   smartMeUpLogo,
   deescut,
   hetchrLogo,
