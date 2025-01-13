@@ -5,6 +5,7 @@ import {
   jobypepperHome,
   nomadherHome,
   packativeHome,
+  smartMeUpLogo,
 } from "~/ui/img";
 
 export type PortfolioItem = {
@@ -74,10 +75,10 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
   },
   {
     id: "Marreli",
-    title: "Smart me up",
+    title: "Smart me up - Marreli",
     date: "July 2020 - September 2020",
     description: "Private dashboard for autopiloted car fleet",
-    imgs: [jobypepperHome],
+    imgs: [smartMeUpLogo],
     url: "https://www.marelli.com/",
     intro:
       "JobyPepper is the leading SaaS platform for student jobs in France. The company provides all the tools students and companies need to find jobs and manage billing. As a developer during the company's early stages, it was an incredible experience to work on a variety of topics.",

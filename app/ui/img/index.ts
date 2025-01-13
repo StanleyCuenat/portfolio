@@ -25,7 +25,9 @@ import profile from "./profile.png";
 import hetchr from "./hetchr.png";
 import hetchrLogo from "./hetchr-logo.jpg";
 import deescut from "./deescut.png";
+import smartMeUpLogo from "./smart-me-up-logo.png";
 export {
+  smartMeUpLogo,
   deescut,
   hetchrLogo,
   hetchr,

@@ -149,9 +149,8 @@ const PortfolioPage = () => {
             weight={FONT_WEIGHT.REGULAR}
             alignment={ALIGNMENT.CENTER}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation
+            Discover a showcase of creative projects that merge innovation with
+            practicality, from web to cutting-edge mobile app development!
           </System.Typography>
         </motion.header>
         {portfolioList.map((portfolio) => (
