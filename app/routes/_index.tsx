@@ -37,6 +37,10 @@ export const meta: MetaFunction = () => {
       content:
         "Stanislas Cuenat - Fullstack developer enjoying Functional programming, TDD and DDD. Building robust Web and Mobile applications from best practices with a dedication to understand your business.",
     },
+    {
+      property: "org:image",
+      content: profile,
+    },
   ];
 };
 
