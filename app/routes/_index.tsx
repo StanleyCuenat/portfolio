@@ -45,7 +45,7 @@ export default function Index() {
   return (
     <div className="w-screen">
       <div className="flex flex-col z-10">
-        <header className="flex flex-row px-4 lg:px-40 py-12 md:py-20">
+        <header className="flex flex-row px-4  md:px-6 lg:px-52 py-12 md:py-20">
           <div className="flex flex-col gap-7">
             <div className="flex flex-col gap-2">
               <System.Typography
@@ -189,11 +189,11 @@ export default function Index() {
                 rel="noreferrer"
                 target="_blank"
                 to="https://malt.fr/profile/stanislascuenat"
-                className="w-[40px] h-[40px] rounded-full duration-200  hover:shadow-md cursor-pointer z-10"
+                className="w-[40px] h-[40px] rounded-full cursor-pointer z-10"
               >
                 <img
                   src={malt}
-                  className="object-contain rounded-full"
+                  className="object-contain rounded-full grayscale hover:grayscale-0 duration-200"
                   alt="malt profile page"
                 />
               </Link>
@@ -201,11 +201,11 @@ export default function Index() {
                 rel="noreferrer"
                 target="_blank"
                 to="https://linkedin.com/in/stanislas-cuenat-8939b3110"
-                className="w-[40px] h-[40px] duration-200 hover:shadow-md cursor-pointer rounded-full z-10"
+                className="w-[40px] h-[40px] duration-200 cursor-pointer rounded-full z-10"
               >
                 <img
                   src={linkedin}
-                  className="object-fit"
+                  className="object-fit grayscale hover:grayscale-0 duration-200"
                   alt="linkedin profile page"
                 />
               </Link>
@@ -213,11 +213,11 @@ export default function Index() {
                 rel="noreferrer"
                 target="_blank"
                 to="https://github.com/StanleyCuenat"
-                className="w-[40px] h-[40px] duration-200 hover:shadow-md cursor-pointer rounded-full z-10"
+                className="w-[40px] h-[40px] duration-200 cursor-pointer rounded-full z-10"
               >
                 <img
                   src={github}
-                  className="object-fit"
+                  className="object-fit grayscale hover:grayscale-0 duration-200"
                   alt="github profile page"
                 />
               </Link>
@@ -225,48 +225,10 @@ export default function Index() {
           </div>
         </header>
         <HomeSection className="bg-main-yellow">
-          <div className="flex flex-col gap-2">
-            <System.Typography
-              type={System.TYPOGRAPHY.H2}
-              color={System.COLORS.BLACK}
-              weight={FONT_WEIGHT.REGULAR}
-            >
-              Portfolio
-            </System.Typography>
-            <System.Typography
-              type={System.TYPOGRAPHY.CONTENT}
-              color={System.COLORS.GREY}
-              weight={FONT_WEIGHT.REGULAR}
-              className="max-w-[600px]"
-            >
-              A curated selection of my completed projects and previous
-              customers. While not exhaustive, it showcases the diversity of my
-              work and the commitment I bring to each endeavor.
-            </System.Typography>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 z-10">
-            {portfolioList.map((portfolio) => (
-              <PortfolioCard
-                key={portfolio.id}
-                title={portfolio.title}
-                img={portfolio.imgs[0] ?? ""}
-                url={portfolio.url}
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat."
-              />
-            ))}
-          </div>
-          <Link to="/portfolio" className="ml-auto z-10" target="_self">
-            See more <ArrowRightCircleIcon className="h-6 w-6 ml-2" />
-          </Link>
-        </HomeSection>
-        <HomeSection>
           <ServiceSection />
         </HomeSection>
         <HomeSection>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <System.Typography
               type={System.TYPOGRAPHY.H2}
               color={System.COLORS.BLACK}
@@ -285,7 +247,7 @@ export default function Index() {
               and dedication.
             </System.Typography>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 z-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-y-8 z-20">
             <QualityCharterItem
               icon={<CalendarIcon className="text-main-black w-6 h-6" />}
               title="Daily Delivery"
@@ -312,8 +274,8 @@ export default function Index() {
             />
           </div>
         </HomeSection>
-        <HomeSection className=" flex-row">
-          <div className="flex flex-col gap-2">
+        <HomeSection direction="row">
+          <div className="flex flex-col gap-4">
             <System.Typography
               type={System.TYPOGRAPHY.H2}
               color={System.COLORS.BLACK}
@@ -332,23 +294,23 @@ export default function Index() {
               diverse projects.
             </System.Typography>
           </div>
-          <div className="grid grid-cols-5 md:grid-cols-5 flex-wrap z-10 border border-main-gray">
+          <div className="flex flex-row flex-wrap z-10 w-full lg:w-2/3 lg:ml-auto lg:justify-end">
             {stackList.map((stack) => (
               <motion.a
                 key={stack.name}
                 href={stack.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group relative duration-200 p-1 md:p-6 flex items-center justify-center border border-main-gray"
+                className="group relative duration-200 p-4 flex items-center justify-center border border-main-gray"
               >
                 <img
                   src={stack.img}
                   alt={stack.name}
-                  className="w-20 h-20 object-contain group-hover:blur-sm"
+                  className="w-16 h-16 object-contain group-hover:blur-sm grayscale group-hover:grayscale-0"
                 />
                 <div className="absolute opacity-0 group-hover:opacity-40 bg-main-black duration-200 w-full h-full" />
                 <System.Typography
-                  type={System.TYPOGRAPHY.SUB}
+                  type={System.TYPOGRAPHY.SMALL}
                   color={System.COLORS.WHITE}
                   weight={FONT_WEIGHT.BOLD}
                   className="absolute opacity-0 flex self-center group-hover:opacity-100  z-20"
@@ -359,16 +321,45 @@ export default function Index() {
             ))}
           </div>
         </HomeSection>
-
         <HomeSection className="bg-main-yellow">
-          <div className="flex flex-col-reverse md:flex-row-reverse md:justify-center gap-12">
+          <System.Typography
+            type={System.TYPOGRAPHY.H2}
+            color={System.COLORS.BLACK}
+            weight={FONT_WEIGHT.REGULAR}
+            alignment={ALIGNMENT.LEFT}
+          >
+            Selected work
+          </System.Typography>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 z-10">
+            {portfolioList.map((portfolio) => (
+              <PortfolioCard
+                date={portfolio.date}
+                description={portfolio.description}
+                key={portfolio.id}
+                title={portfolio.title}
+                img={portfolio.imgs[0] ?? ""}
+                url={portfolio.url}
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat."
+              />
+            ))}
+          </div>
+          <Link to="/portfolio" className="ml-auto z-10" target="_self">
+            See more <ArrowRightCircleIcon className="h-6 w-6 ml-2" />
+          </Link>
+        </HomeSection>
+
+        <HomeSection className="">
+          <div className="flex flex-col-reverse md:flex-row-reverse md:justify-center items-center gap-12">
             <div className=" flex shrink-1 min-w-0 flex-col max-w-[600px] gap-6">
               <System.Typography
                 type={System.TYPOGRAPHY.H2}
                 color={System.COLORS.BLACK}
                 weight={FONT_WEIGHT.REGULAR}
               >
-                About me
+                Who am I ?
               </System.Typography>
               <System.Typography
                 type={System.TYPOGRAPHY.CONTENT}
@@ -386,60 +377,7 @@ export default function Index() {
                 My ultimate goal as a developer is to deliver products that
                 provide the highest level of satisfaction to users and
                 customers.
-                <br />
-                <br />
-                Some of my notable references include:
-                <br />
-                <br />
               </System.Typography>
-              <ul className="list-disc ml-4 flex flex-col gap-2">
-                <li>
-                  <System.Typography
-                    type={System.TYPOGRAPHY.CONTENT}
-                    color={System.COLORS.GREY}
-                    weight={FONT_WEIGHT.REGULAR}
-                  >
-                    <a
-                      href="https://www.nomadher.com/"
-                      className="text-main-black hover:text-main-red duration-200"
-                    >
-                      NomadHer
-                    </a>{" "}
-                    (published in forbes, first app for solo women travelers,
-                    supported by Google with more than 200k users).
-                  </System.Typography>
-                </li>
-                <li>
-                  <System.Typography
-                    type={System.TYPOGRAPHY.CONTENT}
-                    color={System.COLORS.GREY}
-                    weight={FONT_WEIGHT.REGULAR}
-                  >
-                    <a
-                      href="https://innosonian.global/"
-                      className="text-main-black hover:text-main-red duration-200"
-                    >
-                      Innosonian
-                    </a>{" "}
-                    (Asian leader for connected CPR mannekin).
-                  </System.Typography>
-                </li>
-                <li>
-                  <System.Typography
-                    type={System.TYPOGRAPHY.CONTENT}
-                    color={System.COLORS.GREY}
-                    weight={FONT_WEIGHT.REGULAR}
-                  >
-                    <a
-                      href="https://www.jobypepper.com/"
-                      className="text-main-black hover:text-main-red duration-200"
-                    >
-                      JobyPepper
-                    </a>{" "}
-                    (French leader in student jobs).
-                  </System.Typography>
-                </li>
-              </ul>
             </div>
             <div className="hidden md:flex shrink-0  rounded-full h-[150px] w-[150px] md:h-[360px] md:w-[360px]">
               <img
@@ -450,7 +388,7 @@ export default function Index() {
             </div>
           </div>
         </HomeSection>
-        <HomeSection>
+        <HomeSection className="bg-main-yellow">
           <System.Typography
             type={System.TYPOGRAPHY.H2}
             color={System.COLORS.BLACK}
@@ -460,6 +398,7 @@ export default function Index() {
           </System.Typography>
           <div className="flex flex-col gap-7">
             <ExperienceCard
+              location="Seoul - South Korea"
               title="Freelance - Fullstack engineer"
               dateStart="June 2024"
               dateEnd="Now"
@@ -476,6 +415,7 @@ export default function Index() {
               link="https://www.malt.fr/profile/stanislascuenat"
             />
             <ExperienceCard
+              location="Seoul - South Korea"
               title="SicPama - Fullstack engineer"
               dateStart="November 2023"
               dateEnd="June 2024"
@@ -490,6 +430,7 @@ export default function Index() {
               link="https://www.sicpama.com/en"
             />
             <ExperienceCard
+              location="Seoul - South Korea"
               title="NomadHer - Head Of Tech"
               dateStart="April 2022"
               dateEnd="November 2023"
@@ -504,6 +445,7 @@ export default function Index() {
               link="https://nomadher.com/"
             />
             <ExperienceCard
+              location="Seoul - South Korea"
               title="Innosonian - Frontend engineer"
               dateStart="September 2020"
               dateEnd="April 2022"
@@ -518,6 +460,7 @@ export default function Index() {
               link="https://innosonian.global/"
             />
             <ExperienceCard
+              location="Lyon - France"
               title="Freelance - Fullstack engineer"
               dateStart="September 2018"
               dateEnd="September 2020"
@@ -526,7 +469,7 @@ export default function Index() {
             />
           </div>
         </HomeSection>
-        <HomeSection className="bg-main-yellow justify-center">
+        <HomeSection className="justify-center">
           <System.Typography
             type={System.TYPOGRAPHY.SUB}
             color={System.COLORS.GREY}

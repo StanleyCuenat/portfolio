@@ -77,13 +77,13 @@ const handleColors = (color: COLORS) => {
 const handleFontSize = (type: TYPOGRAPHY) => {
   switch (type) {
     case TYPOGRAPHY.H1:
-      return "text-5xl";
+      return "text-5xl lg:text-5xl";
     case TYPOGRAPHY.H2:
-      return "text-4xl";
+      return "text-4xl lg:text-4xl";
     case TYPOGRAPHY.H3:
-      return "text-3xl";
+      return "text-2xl lg:text-3xl";
     case TYPOGRAPHY.SUB:
-      return "text-2xl";
+      return "text-xl lg:text-2xl";
     case TYPOGRAPHY.SMALL:
       return "text-sm";
     default:

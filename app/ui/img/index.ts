@@ -22,7 +22,9 @@ import nomadherHome from "./nomadher-home.png";
 import innosonianHome from "./innosonian-home.png";
 import jobypepperHome from "./jobypepper-home.png";
 import profile from "./profile.png";
+import hetchr from "./hetchr.png";
 export {
+  hetchr,
   profile,
   jobypepperHome,
   innosonianHome,

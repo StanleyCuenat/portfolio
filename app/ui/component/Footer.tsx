@@ -4,16 +4,7 @@ import { ALIGNMENT, FONT_WEIGHT } from "../system/Typography";
 
 export const Footer = () => {
   return (
-    <section className="flex flex-row items-center mt-7 pb-2 gap-4 px-4 justify-end">
-      <Typography
-        type={TYPOGRAPHY.SMALL}
-        color={COLORS.GREY}
-        weight={FONT_WEIGHT.BOLD}
-        alignment={ALIGNMENT.LEFT}
-        className="uppercase hidden md:block"
-      >
-        Contact Me
-      </Typography>
+    <section className="flex flex-row items-center pb-2 gap-4 px-4 justify-start">
       <Link
         rel="noreferrer"
         target="_blank"
@@ -46,6 +37,15 @@ export const Footer = () => {
       >
         <img src={github} className="object-fit" alt="github profile page" />
       </Link>
+      <Typography
+        type={TYPOGRAPHY.SMALL}
+        color={COLORS.GREY}
+        weight={FONT_WEIGHT.REGULAR}
+        alignment={ALIGNMENT.LEFT}
+        className="hidden md:flex ml-auto"
+      >
+        Stanislas Cuenat - 2025
+      </Typography>
     </section>
   );
 };

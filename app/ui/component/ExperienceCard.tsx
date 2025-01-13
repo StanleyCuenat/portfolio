@@ -9,6 +9,7 @@ type ExperienceCard = {
   dateEnd: string;
   competences: string[];
   link: string;
+  location: string;
 };
 export const ExperienceCard = (props: ExperienceCard) => {
   const handleClick = useCallback(() => {
@@ -42,6 +43,13 @@ export const ExperienceCard = (props: ExperienceCard) => {
             weight={FONT_WEIGHT.LIGHT}
           >
             {props.dateStart} - {props.dateEnd}
+          </Typography>
+          <Typography
+            color={COLORS.BLACK}
+            type={TYPOGRAPHY.SMALL}
+            weight={FONT_WEIGHT.LIGHT}
+          >
+            {props.location}
           </Typography>
         </div>
       </div>

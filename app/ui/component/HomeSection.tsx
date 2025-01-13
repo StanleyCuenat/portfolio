@@ -1,13 +1,21 @@
 import { PropsWithChildren } from "react";
 
-export const HomeSection = (
-  props: PropsWithChildren<{ className?: string }>
-) => {
+interface HomeSectionProps extends PropsWithChildren {
+  direction?: "col" | "row";
+  className?: string;
+}
+
+export const HomeSection = ({
+  direction = "col",
+  className,
+  children,
+}: HomeSectionProps) => {
+  const dir = direction === "col" ? "flex-col" : "flex-col lg:flex-row";
   return (
     <section
-      className={`flex flex-col gap-7 px-4 lg:px-40 py-12 md:py-24 ${props.className}`}
+      className={`flex ${dir} gap-10 px-4 md:px-6 lg:px-52 py-12 md:py-24 ${className}`}
     >
-      {props.children}
+      {children}
     </section>
   );
 };

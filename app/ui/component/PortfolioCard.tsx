@@ -8,6 +8,8 @@ type PortfolioCardProps = {
   title: string;
   img: string;
   url: string;
+  date: string;
+  description: string;
   content: string;
   className?: string;
 };
@@ -23,7 +25,7 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
       <Link
         target="_blank"
         to={props.url}
-        className={`p-4 bg-white rounded-lg flex flex-col gap-4 group ${
+        className={`p-6 bg-white rounded-lg flex flex-col h-full  grow gap-4 group ${
           props.className ?? ""
         }`}
       >
@@ -44,23 +46,36 @@ export const PortfolioCard = (props: PortfolioCardProps) => {
             <ArrowRightCircleIcon className="h-6 w-6 ml-2" />
           </div>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <System.Typography
-            type={System.TYPOGRAPHY.SUB}
+            type={System.TYPOGRAPHY.H3}
             color={System.COLORS.BLACK}
             weight={FONT_WEIGHT.REGULAR}
           >
             {props.title}
           </System.Typography>
+          <div className="flex flex-col gap-1">
+            <System.Typography
+              type={System.TYPOGRAPHY.SUB}
+              color={System.COLORS.BLACK}
+              weight={FONT_WEIGHT.REGULAR}
+            >
+              {props.description}
+            </System.Typography>
+            <System.Typography
+              type={System.TYPOGRAPHY.CONTENT}
+              color={System.COLORS.GREY}
+              weight={FONT_WEIGHT.REGULAR}
+            >
+              {props.date}
+            </System.Typography>
+          </div>
           <System.Typography
             type={System.TYPOGRAPHY.CONTENT}
             color={System.COLORS.GREY}
             weight={FONT_WEIGHT.REGULAR}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            {props.content}
           </System.Typography>
         </div>
       </Link>

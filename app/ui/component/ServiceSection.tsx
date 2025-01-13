@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { System } from "..";
 import { FONT_WEIGHT } from "../system/Typography";
 import { COLORS } from "../system";
-import { nomadherHome } from "../img";
+import { hetchr, innosonianHome, nomadherHome, packativeHome } from "../img";
 import { Link } from "@remix-run/react";
 
 type ServiceSectionItemProps = {
@@ -17,7 +17,7 @@ const ServiceSectionItem = (props: ServiceSectionItemProps) => {
     if (entries.length < 1) {
       return;
     }
-    setBg(entries[0]?.isIntersecting ? "bg-main-yellow" : "bg-white");
+    setBg(entries[0]?.isIntersecting ? "bg-white " : "bg-main-yellow");
   }, []);
 
   useEffect(() => {
@@ -37,26 +37,29 @@ const ServiceSectionItem = (props: ServiceSectionItemProps) => {
   }, [callback]);
   return (
     <div
-      className={`flex flex-col gap-2 p-5 ${bg} rounded-xl duration-200`}
+      className={`flex flex-col gap-4 p-5 ${bg} rounded-xl duration-200`}
       ref={ref}
     >
       <img src={props.img} className="rounded-xl object-fit" />
-      <div className="flex flex-col gap-4">
-        <System.Typography
-          type={System.TYPOGRAPHY.SUB}
-          color={System.COLORS.BLACK}
-          weight={FONT_WEIGHT.REGULAR}
-        >
-          {props.title}
-        </System.Typography>
-        <System.Typography
-          type={System.TYPOGRAPHY.CONTENT}
-          color={System.COLORS.GREY}
-          weight={FONT_WEIGHT.REGULAR}
-        >
-          {props.content}
-        </System.Typography>
-      </div>
+      <System.Typography
+        type={System.TYPOGRAPHY.SUB}
+        color={System.COLORS.BLACK}
+        weight={FONT_WEIGHT.REGULAR}
+      >
+        {props.title}
+      </System.Typography>
+      <System.Typography
+        type={System.TYPOGRAPHY.CONTENT}
+        color={System.COLORS.GREY}
+        weight={FONT_WEIGHT.REGULAR}
+      >
+        {props.content}
+      </System.Typography>
+      <Link to="/portfolio">
+        <System.Button color={COLORS.BLACK} className="basis-0">
+          See my work
+        </System.Button>
+      </Link>
     </div>
   );
 };
@@ -68,14 +71,14 @@ export const ServiceSection = () => {
     if (entries.length < 1) {
       return;
     }
-    setSticky(entries[0]?.isIntersecting ? "md:sticky" : "");
+    setSticky(entries[0]?.isIntersecting ? "md:sticky md:pt-20" : "");
   }, []);
 
   useEffect(() => {
     const copyRef = ref.current;
     const observer = new IntersectionObserver(callback, {
       root: null,
-      rootMargin: "0% 0% 0% 0%",
+      rootMargin: "-10% 0% -90% 0%",
     });
     if (copyRef) {
       observer.observe(copyRef);
@@ -90,7 +93,7 @@ export const ServiceSection = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
       <div
-        className={`${sticky} flex flex-col h-auto gap-7 w-full shrink self-baseline top-[100px]`}
+        className={`${sticky} duration-200 flex flex-col h-auto gap-7 w-full shrink self-baseline top-[100px]`}
       >
         <System.Typography
           type={System.TYPOGRAPHY.H2}
@@ -100,7 +103,7 @@ export const ServiceSection = () => {
           Let me assist you in Achieving your goal
         </System.Typography>
         <System.Typography
-          type={System.TYPOGRAPHY.SUB}
+          type={System.TYPOGRAPHY.CONTENT}
           color={System.COLORS.GREY}
           weight={FONT_WEIGHT.REGULAR}
         >
@@ -118,28 +121,26 @@ export const ServiceSection = () => {
           </System.Button>
         </Link>
       </div>
-      <div className="flex flex-col gap-16" ref={ref}>
+      <div className="flex flex-col gap-6 md:gap-16" ref={ref}>
         <ServiceSectionItem
           title="Frontend development"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          img={nomadherHome}
+          content="Crafting detail-oriented and robust frontends ready to meet your customers' needs. Delivering a fully tested frontend with reusable components and a dedicated design system!"
+          img={packativeHome}
         />
         <ServiceSectionItem
           title="Backend development"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          img={nomadherHome}
+          content="Transforming your idea into production-ready software. Using TDD and DDD methodologies, your backend will be prepared for every use case."
+          img={hetchr}
         />
         <ServiceSectionItem
           title="Mobile development"
-          content="I offer expertise in web development, problem-solving, and strategic
-            planning for tailored solutions that match your unique needs."
+          content="Bringing your ideas to life with production-ready mobile applications. Leveraging robust development practices and scalable architecture, your app will be fully optimized for every use case and platform."
           img={nomadherHome}
         />
         <ServiceSectionItem
           title="Codebase refactoring"
-          content="I offer expertise in web development, problem-solving, and strategic
-            planning for tailored solutions that match your unique needs."
-          img={nomadherHome}
+          content="Elevating your existing codebase through efficient and structured refactoring. Improving code readability, reducing technical debt, and enhancing maintainability with unit test. "
+          img={innosonianHome}
         />
       </div>
     </div>
