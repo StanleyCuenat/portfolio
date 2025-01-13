@@ -5,7 +5,7 @@ import { LogoIcon } from "../icons/Logo";
 export const NavBar = () => {
   return (
     <nav
-      className="w-screen z-50 sticky top-0 absolute py-3 px-4 lg:py-6 lg:px-10 gap-4 flex flex-row justify-end bg-white items-center"
+      className="w-screen z-50 sticky top-0 absolute py-3 px-4 lg:px-10 gap-4 flex flex-row justify-end bg-white items-center"
       style={{}}
     >
       <RNavLink

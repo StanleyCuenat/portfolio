@@ -31,11 +31,11 @@ export const loader = async () => {
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Stanislas Cuenat - Fullstack freelance developer" },
+    { title: "Stanislas Cuenat - Web & mobile freelance developer" },
     {
       name: "Home page",
       content:
-        "Stanislas Cuenat - Fullstack developer enjoying Functional programming, TDD and DDD. Building robust Web and Mobile applications from best practices with a dedication to understand your business.",
+        "Stanislas Cuenat - Web & mobile developer enjoying Functional programming, TDD and DDD. Building robust Web and Mobile applications from best practices with a dedication to understand your business.",
     },
     {
       property: "org:image",
@@ -61,7 +61,7 @@ export default function Index() {
               </System.Typography>
 
               <TypingAnimation
-                text="Fullstack Freelance Engineer"
+                text="Web & mobile Freelance Engineer"
                 withParent={(children) => (
                   <System.Typography
                     type={System.TYPOGRAPHY.H2}
@@ -79,7 +79,7 @@ export default function Index() {
               weight={FONT_WEIGHT.REGULAR}
               className="max-w-[600px]"
             >
-              Fullstack engineer enjoying Functional programming with{" "}
+              Web & mobile engineer enjoying Functional programming with{" "}
               <TypingAnimation
                 text="TDD and DDD"
                 withParent={(children) => (
@@ -343,7 +343,7 @@ export default function Index() {
                 title={portfolio.title}
                 img={portfolio.imgs[0] ?? ""}
                 url={portfolio.url}
-                content={portfolio.content}
+                content={portfolio.intro}
               />
             ))}
           </div>
@@ -469,34 +469,6 @@ export default function Index() {
               link="https://www.malt.fr/profile/stanislascuenat"
             />
           </div>
-        </HomeSection>
-        <HomeSection className="justify-center">
-          <System.Typography
-            type={System.TYPOGRAPHY.SUB}
-            color={System.COLORS.GREY}
-            weight={FONT_WEIGHT.REGULAR}
-            alignment={ALIGNMENT.CENTER}
-          >
-            Have a Project ?
-          </System.Typography>
-          <System.Typography
-            type={System.TYPOGRAPHY.H1}
-            color={System.COLORS.BLACK}
-            weight={FONT_WEIGHT.REGULAR}
-            alignment={ALIGNMENT.CENTER}
-          >
-            Let's talk with me !
-          </System.Typography>
-          <Link
-            rel="noreferrer"
-            target="_blank"
-            to="https://linkedin.com/in/stanislas-cuenat-8939b3110"
-            className="no-underline flex basis-auto shrink-1 grow-1 items-center justify-center mt-6"
-          >
-            <Button color={COLORS.BLACK} className="z-20">
-              Contact me
-            </Button>
-          </Link>
         </HomeSection>
       </div>
     </div>

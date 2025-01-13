@@ -23,7 +23,11 @@ import innosonianHome from "./innosonian-home.png";
 import jobypepperHome from "./jobypepper-home.png";
 import profile from "./profile.png";
 import hetchr from "./hetchr.png";
+import hetchrLogo from "./hetchr-logo.jpg";
+import deescut from "./deescut.png";
 export {
+  deescut,
+  hetchrLogo,
   hetchr,
   profile,
   jobypepperHome,

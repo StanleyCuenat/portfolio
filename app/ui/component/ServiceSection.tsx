@@ -107,8 +107,8 @@ export const ServiceSection = () => {
           color={System.COLORS.GREY}
           weight={FONT_WEIGHT.REGULAR}
         >
-          I offer expertise in web, mobile and fullstack development for
-          tailored solutions that match your unique needs.
+          I offer expertise in web and mobile development for tailored solutions
+          that match your unique needs.
         </System.Typography>
         <Link
           rel="noreferrer"
