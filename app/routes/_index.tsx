@@ -49,7 +49,7 @@ export default function Index() {
   return (
     <div className="w-screen">
       <div className="flex flex-col z-10">
-        <header className="flex flex-row px-4  md:px-6 lg:px-52 py-12 md:py-20">
+        <header className="flex flex-row px-4  md:px-6 lg:px-52 2xl:px-96 py-12 md:py-20">
           <div className="flex flex-col gap-7">
             <div className="flex flex-col gap-2">
               <System.Typography
@@ -251,7 +251,7 @@ export default function Index() {
               and dedication.
             </System.Typography>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-y-8 z-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-20 z-20">
             <QualityCharterItem
               icon={<CalendarIcon className="text-main-black w-6 h-6" />}
               title="Daily Delivery"
@@ -397,7 +397,7 @@ export default function Index() {
           >
             Experiences
           </System.Typography>
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-col gap-4">
             <ExperienceCard
               location="Seoul - South Korea"
               title="Freelance - Fullstack engineer"

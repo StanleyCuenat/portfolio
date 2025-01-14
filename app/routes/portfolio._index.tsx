@@ -8,10 +8,31 @@ type PortfolioItemProps = {
   portfolio: PortfolioItem;
 };
 
+const PortfolioSpecItem = (props: { title: string; content: string }) => {
+  return (
+    <div className="flex flex-col gap-2">
+      <System.Typography
+        type={System.TYPOGRAPHY.CONTENT}
+        color={System.COLORS.GREY}
+        weight={FONT_WEIGHT.REGULAR}
+      >
+        {props.title}
+      </System.Typography>
+      <System.Typography
+        type={System.TYPOGRAPHY.SUB}
+        color={System.COLORS.BLACK}
+        weight={FONT_WEIGHT.REGULAR}
+      >
+        {props.content}
+      </System.Typography>
+    </div>
+  );
+};
+
 const PortfolioListItem = (props: PortfolioItemProps) => {
   return (
     <motion.section
-      className="flex flex-col  gap-10 px-4 md:px-6 lg:px-52 py-12 md:py-16"
+      className="flex flex-col  gap-10 max-w-[1000px] mx-auto"
       initial={{ opacity: 0, marginTop: 200 }}
       whileInView={{ opacity: 1, marginTop: 0 }}
       transition={{ duration: 0.5, delay: 0, ease: "easeIn" }}
@@ -38,57 +59,11 @@ const PortfolioListItem = (props: PortfolioItemProps) => {
             {props.portfolio.intro}
           </System.Typography>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-7">
-          <div className="flex flex-col">
-            <System.Typography
-              type={System.TYPOGRAPHY.CONTENT}
-              color={System.COLORS.GREY}
-              weight={FONT_WEIGHT.REGULAR}
-            >
-              Client
-            </System.Typography>
-            <System.Typography
-              type={System.TYPOGRAPHY.SUB}
-              color={System.COLORS.BLACK}
-              weight={FONT_WEIGHT.REGULAR}
-            >
-              {props.portfolio.title}
-            </System.Typography>
-          </div>
-          <div className="flex flex-col ">
-            <System.Typography
-              type={System.TYPOGRAPHY.CONTENT}
-              color={System.COLORS.GREY}
-              weight={FONT_WEIGHT.REGULAR}
-            >
-              Work type
-            </System.Typography>
-            <System.Typography
-              type={System.TYPOGRAPHY.SUB}
-              color={System.COLORS.BLACK}
-              weight={FONT_WEIGHT.REGULAR}
-            >
-              {props.portfolio.type}
-            </System.Typography>
-          </div>
-          <div className="flex flex-col">
-            <System.Typography
-              type={System.TYPOGRAPHY.CONTENT}
-              color={System.COLORS.GREY}
-              weight={FONT_WEIGHT.REGULAR}
-            >
-              Dates
-            </System.Typography>
-            <System.Typography
-              type={System.TYPOGRAPHY.SUB}
-              color={System.COLORS.BLACK}
-              weight={FONT_WEIGHT.REGULAR}
-            >
-              {props.portfolio.date}
-            </System.Typography>
-          </div>
-
-          <div className="flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4">
+          <PortfolioSpecItem title="Client" content={props.portfolio.title} />
+          <PortfolioSpecItem title="Worl type" content={props.portfolio.type} />
+          <PortfolioSpecItem title="Dates" content={props.portfolio.date} />
+          <div className="flex flex-col gap-2">
             <System.Typography
               type={System.TYPOGRAPHY.CONTENT}
               color={System.COLORS.GREY}
@@ -98,7 +73,7 @@ const PortfolioListItem = (props: PortfolioItemProps) => {
             </System.Typography>
             <Link to={props.portfolio.url}>
               <System.Typography
-                className="mr-12"
+                className="mr-12 hover:text-main-red"
                 type={System.TYPOGRAPHY.SUB}
                 color={System.COLORS.BLACK}
                 weight={FONT_WEIGHT.REGULAR}
@@ -127,9 +102,9 @@ const PortfolioPage = () => {
   const { portfolioList } = useLoaderData<typeof loader>();
   return (
     <div className="w-screen bg-main-yellow">
-      <div className="flex flex-col ">
+      <div className="flex flex-col">
         <motion.header
-          className="flex flex-col gap-10 px-4 md:px-6 lg:px-52 py-6 md:py-12"
+          className="flex flex-col gap-10 px-4 md:px-6 lg:px-52 py-6 md:py-28 bg-white"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0, ease: "easeIn" }}
@@ -153,9 +128,11 @@ const PortfolioPage = () => {
             practicality, from web to cutting-edge mobile app development!
           </System.Typography>
         </motion.header>
-        {portfolioList.map((portfolio) => (
-          <PortfolioListItem portfolio={portfolio} key={portfolio.id} />
-        ))}
+        <div className="flex flex-col justify-center items-center gap-16 mx-4 my-28">
+          {portfolioList.map((portfolio) => (
+            <PortfolioListItem portfolio={portfolio} key={portfolio.id} />
+          ))}
+        </div>
       </div>
     </div>
   );

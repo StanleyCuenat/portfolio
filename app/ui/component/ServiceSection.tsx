@@ -93,14 +93,14 @@ export const ServiceSection = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
       <div
-        className={`${sticky} duration-200 flex flex-col h-auto gap-7 w-full shrink self-baseline top-[100px]`}
+        className={`${sticky} duration-200 flex flex-col h-auto lg:px-6 gap-7 w-full shrink self-baseline top-[100px]`}
       >
         <System.Typography
           type={System.TYPOGRAPHY.H2}
           color={System.COLORS.BLACK}
           weight={FONT_WEIGHT.REGULAR}
         >
-          Let me assist you in Achieving your goal
+          Let me assist you in achieving your goals
         </System.Typography>
         <System.Typography
           type={System.TYPOGRAPHY.CONTENT}

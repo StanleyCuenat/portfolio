@@ -13,7 +13,7 @@ export const HomeSection = ({
   const dir = direction === "col" ? "flex-col" : "flex-col lg:flex-row";
   return (
     <section
-      className={`flex ${dir} gap-10 px-4 md:px-6 lg:px-52 py-12 md:py-24 ${className}`}
+      className={`flex ${dir} gap-10 px-4 md:px-6 lg:px-52 2xl:px-96 py-12 md:py-24 ${className}`}
     >
       {children}
     </section>
