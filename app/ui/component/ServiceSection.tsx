@@ -37,24 +37,26 @@ const ServiceSectionItem = (props: ServiceSectionItemProps) => {
   }, [callback]);
   return (
     <div
-      className={`flex flex-col gap-4 p-5 ${bg} rounded-xl duration-200`}
+      className={`flex flex-col gap-6 p-5 ${bg} rounded-xl duration-200`}
       ref={ref}
     >
       <img src={props.img} className="rounded-xl object-fit" />
-      <System.Typography
-        type={System.TYPOGRAPHY.SUB}
-        color={System.COLORS.BLACK}
-        weight={FONT_WEIGHT.REGULAR}
-      >
-        {props.title}
-      </System.Typography>
-      <System.Typography
-        type={System.TYPOGRAPHY.CONTENT}
-        color={System.COLORS.GREY}
-        weight={FONT_WEIGHT.LIGHT}
-      >
-        {props.content}
-      </System.Typography>
+      <div className="flex flex-col gap-1">
+        <System.Typography
+          type={System.TYPOGRAPHY.SUB}
+          color={System.COLORS.BLACK}
+          weight={FONT_WEIGHT.REGULAR}
+        >
+          {props.title}
+        </System.Typography>
+        <System.Typography
+          type={System.TYPOGRAPHY.CONTENT}
+          color={System.COLORS.GREY}
+          weight={FONT_WEIGHT.LIGHT}
+        >
+          {props.content}
+        </System.Typography>
+      </div>
       <Link to="/portfolio">
         <System.Button color={COLORS.BLACK} className="basis-0">
           See my work

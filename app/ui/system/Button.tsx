@@ -3,6 +3,7 @@ import { COLORS } from "./Colors";
 
 interface ButtonProps extends PropsWithChildren {
   color: COLORS;
+  type?: "full" | "outline";
   className?: string;
 }
 

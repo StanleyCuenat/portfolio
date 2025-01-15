@@ -66,10 +66,24 @@ export const PortfolioListItem = (props: PortfolioItemProps) => {
             </Link>
           </div>
         </div>
+
         <div className="flex flex-row items-center">
           <Link to={`/portfolio/${props.portfolio.id}`}>
             <System.Button color={COLORS.BLACK}>View detail</System.Button>
           </Link>
+        </div>
+        <div className="flex flex-row flex-wrap gap-2">
+          {props.portfolio.technologies.map((tech) => (
+            <System.Typography
+              key={tech}
+              type={System.TYPOGRAPHY.SMALL}
+              color={System.COLORS.BLACK}
+              weight={FONT_WEIGHT.REGULAR}
+              className="flex items-center border border-main-black rounded-full px-3 py-1"
+            >
+              {tech}
+            </System.Typography>
+          ))}
         </div>
       </div>
     </motion.section>
