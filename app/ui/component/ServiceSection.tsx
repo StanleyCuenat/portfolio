@@ -51,7 +51,7 @@ const ServiceSectionItem = (props: ServiceSectionItemProps) => {
       <System.Typography
         type={System.TYPOGRAPHY.CONTENT}
         color={System.COLORS.GREY}
-        weight={FONT_WEIGHT.REGULAR}
+        weight={FONT_WEIGHT.LIGHT}
       >
         {props.content}
       </System.Typography>
@@ -105,7 +105,7 @@ export const ServiceSection = () => {
         <System.Typography
           type={System.TYPOGRAPHY.CONTENT}
           color={System.COLORS.GREY}
-          weight={FONT_WEIGHT.REGULAR}
+          weight={FONT_WEIGHT.LIGHT}
         >
           I offer expertise in web and mobile development for tailored solutions
           that match your unique needs.

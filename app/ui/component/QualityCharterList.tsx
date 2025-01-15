@@ -38,7 +38,7 @@ export const QualityCharterItem = (props: QualityCharterItemProps) => {
         <System.Typography
           type={System.TYPOGRAPHY.CONTENT}
           color={System.COLORS.GREY}
-          weight={FONT_WEIGHT.REGULAR}
+          weight={FONT_WEIGHT.LIGHT}
         >
           {props.content}
         </System.Typography>

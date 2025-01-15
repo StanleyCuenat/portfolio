@@ -19,7 +19,9 @@ export type PortfolioItem = {
   intro: string;
   type: string;
   challenge: string;
-  result: string;
+  result: string[];
+  sector: string;
+  technologies: string[];
 };
 const PORTFOLIO_LIST: PortfolioItem[] = [
   {
@@ -32,8 +34,18 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     intro:
       "Packative is a young startup striving to revolutionize the packaging industry in South Korea. Through their applications, they aim to help small and medium-sized businesses easily create and order custom-designed packaging.",
     type: "Frontend & Backend",
-    challenge: "",
-    result: "",
+    challenge:
+      "As a web developer, I played a key role in developing their innovative e-commerce platform using Next.js and Medusa.js.\nMy responsibilities included designing and implementing the core platform, creating and enhancing the admin dashboard, integrating a sleek new design, and building a custom size system tailored to packaging needs.\nI also worked on their sophisticated 3D editor to provide users with an interactive customization experience.\nThroughout the project, I adhered to rigorous Test-Driven Development (TDD) practices, leveraging Zustand to ensure robust state management and maintainability.",
+    result: [""],
+    technologies: [
+      "Next.JS",
+      "Zustand",
+      "Medusa.JS",
+      "AWS",
+      "Typescript",
+      "PostgreSQL",
+    ],
+    sector: "E-commerce application",
   },
 
   {
@@ -46,8 +58,21 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     intro:
       "NomadHer is the first mobile application designed for solo women travelers. As the Head of Tech, I managed the entire application independently, ensuring the platform's scalability. Growing the user base from 500 to over 200,000 was an incredible experience.",
     type: "Head of tech",
-    challenge: "",
-    result: "",
+    challenge:
+      "As a web developer, I played a key role in developing their innovative e-commerce platform using Next.js and Medusa.js.\nMy responsibilities included designing and implementing the core platform, creating and enhancing the admin dashboard, integrating a sleek new design, and building a custom size system tailored to packaging needs.\n\nI also worked on their sophisticated 3D editor to provide users with an interactive customization experience.\n\nThroughout the project, I adhered to rigorous Test-Driven Development (TDD) practices, leveraging Zustand to ensure robust state management and maintainability.",
+    result: [""],
+    technologies: [
+      "React Native",
+      "Redux",
+      "GCP",
+      "Firebase",
+      "Typescript",
+      "Firestore",
+      "ElasticSearch",
+      "React",
+      "Nest.JS",
+    ],
+    sector: "Social network - Mobile application",
   },
   {
     id: "innosonian",
@@ -59,8 +84,19 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     intro:
       "Innosonian is a leading provider of connected CPR manikins in Asia. Developing their web and mobile applications for use with these manikins, as well as their online class training system, presented significant challenges as a developer.",
     type: "Frontend & Backend",
-    challenge: "",
-    result: "",
+    challenge:
+      "As a web developer, I played a key role in developing their innovative e-commerce platform using Next.js and Medusa.js.\nMy responsibilities included designing and implementing the core platform, creating and enhancing the admin dashboard, integrating a sleek new design, and building a custom size system tailored to packaging needs.\n\nI also worked on their sophisticated 3D editor to provide users with an interactive customization experience.\n\nThroughout the project, I adhered to rigorous Test-Driven Development (TDD) practices, leveraging Zustand to ensure robust state management and maintainability.",
+    result: [""],
+    technologies: [
+      "React",
+      "Redux",
+      "AWS",
+      "Typescript",
+      "PostgreSQL",
+      "WebRTC",
+      "Web bluetooth",
+    ],
+    sector: "Healthcare & embedded software",
   },
   {
     id: "jobypepper",
@@ -72,8 +108,11 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     intro:
       "JobyPepper is the leading SaaS platform for student jobs in France. The company provides all the tools students and companies need to find jobs and manage billing. As a developer during the company's early stages, it was an incredible experience to work on a variety of topics.",
     type: "Frontend & Backend",
-    challenge: "",
-    result: "",
+    challenge:
+      "As a web developer, I played a key role in developing their innovative e-commerce platform using Next.js and Medusa.js.\nMy responsibilities included designing and implementing the core platform, creating and enhancing the admin dashboard, integrating a sleek new design, and building a custom size system tailored to packaging needs.\nI also worked on their sophisticated 3D editor to provide users with an interactive customization experience.\nThroughout the project, I adhered to rigorous Test-Driven Development (TDD) practices, leveraging Zustand to ensure robust state management and maintainability.",
+    result: [""],
+    technologies: ["React", "Redux", "MongoDB"],
+    sector: "SaaS - Student jobs",
   },
   {
     id: "Marreli",
@@ -85,8 +124,11 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     intro:
       "SmartMeUp, founded in 2012 and based in Meylan, France, specialized in developing perception software for autonomous driving, focusing on low-power object detection and 3D environment modeling. With my help we created an admin dashboard and reviewed their anotation plateform and system",
     type: "Frontend & Backend",
-    challenge: "",
-    result: "",
+    challenge:
+      "As a web developer, I played a key role in developing their innovative e-commerce platform using Next.js and Medusa.js.\nMy responsibilities included designing and implementing the core platform, creating and enhancing the admin dashboard, integrating a sleek new design, and building a custom size system tailored to packaging needs.\n\nI also worked on their sophisticated 3D editor to provide users with an interactive customization experience.\n\nThroughout the project, I adhered to rigorous Test-Driven Development (TDD) practices, leveraging Zustand to ensure robust state management and maintainability.",
+    result: [""],
+    technologies: ["Vue.JS", "Python", "MongoDB", "Typescript", "Jango"],
+    sector: "Computer vision - autopilot cars",
   },
   {
     id: "Hetchr",
@@ -98,8 +140,18 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     intro:
       "JobyPepper is the leading SaaS platform for student jobs in France. The company provides all the tools students and companies need to find jobs and manage billing. As a developer during the company's early stages, it was an incredible experience to work on a variety of topics.",
     type: "Frontend & Backend",
-    challenge: "",
-    result: "",
+    challenge:
+      "As a web developer, I played a key role in developing their innovative e-commerce platform using Next.js and Medusa.js.\nMy responsibilities included designing and implementing the core platform, creating and enhancing the admin dashboard, integrating a sleek new design, and building a custom size system tailored to packaging needs.\n\nI also worked on their sophisticated 3D editor to provide users with an interactive customization experience.\n\nThroughout the project, I adhered to rigorous Test-Driven Development (TDD) practices, leveraging Zustand to ensure robust state management and maintainability.",
+    result: [""],
+    technologies: [
+      "React",
+      "Redux",
+      "Webhook",
+      "AWS",
+      "Typescript",
+      "PostgreSQL",
+    ],
+    sector: "SaaS - HR - project management",
   },
   {
     id: "sicpama",
@@ -111,8 +163,19 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     type: "Frontend & Backend",
     intro:
       "SicPama is a South Korean startup founded in 2021, specializing in QR code-based ordering and payment systems for the restaurant industry. Their platform enables customers to place joint orders and choose payment options without the need for additional hardware, enhancing operational efficiency for restaurant owners",
-    challenge: "",
-    result: "",
+    challenge:
+      "As a web developer, I played a key role in developing their innovative e-commerce platform using Next.js and Medusa.js.\nMy responsibilities included designing and implementing the core platform, creating and enhancing the admin dashboard, integrating a sleek new design, and building a custom size system tailored to packaging needs.\n\nI also worked on their sophisticated 3D editor to provide users with an interactive customization experience.\n\nThroughout the project, I adhered to rigorous Test-Driven Development (TDD) practices, leveraging Zustand to ensure robust state management and maintainability.",
+    result: [""],
+    technologies: [
+      "Next.JS",
+      "React",
+      "Zustand",
+      "AWS",
+      "Typescript",
+      "PostgreSQL",
+      "Express",
+    ],
+    sector: "Food & Beverage - Point Of Sale",
   },
   {
     id: "Deescut",
@@ -124,10 +187,15 @@ const PORTFOLIO_LIST: PortfolioItem[] = [
     intro:
       "JobyPepper is the leading SaaS platform for student jobs in France. The company provides all the tools students and companies need to find jobs and manage billing. As a developer during the company's early stages, it was an incredible experience to work on a variety of topics.",
     type: "Frontend",
-    challenge: "",
-    result: "",
+    challenge:
+      "As a web developer, I played a key role in developing their innovative e-commerce platform using Next.js and Medusa.js.\nMy responsibilities included designing and implementing the core platform, creating and enhancing the admin dashboard, integrating a sleek new design, and building a custom size system tailored to packaging needs.\n\nI also worked on their sophisticated 3D editor to provide users with an interactive customization experience.\n\nThroughout the project, I adhered to rigorous Test-Driven Development (TDD) practices, leveraging Zustand to ensure robust state management and maintainability.",
+    result: [""],
+    technologies: ["React", "Redux", "Typescript"],
+    sector: "Social network - Debate plateform",
   },
 ];
 
 export const getPortfolioHome = async () => PORTFOLIO_LIST.slice(0, 4);
 export const getPortfolioList = async () => PORTFOLIO_LIST;
+export const getPortfolioById = async (id: string) =>
+  PORTFOLIO_LIST.find((p) => p.id === id);

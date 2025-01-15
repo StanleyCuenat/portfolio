@@ -87,7 +87,7 @@ const handleFontSize = (type: TYPOGRAPHY) => {
     case TYPOGRAPHY.SMALL:
       return "text-sm";
     default:
-      return "text-base";
+      return "text-lg";
   }
 };
 

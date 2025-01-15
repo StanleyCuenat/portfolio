@@ -7,3 +7,5 @@ export { Footer } from "./Footer";
 export { PortfolioCard } from "./PortfolioCard";
 export { HomeSection } from "./HomeSection";
 export { ServiceSection } from "./ServiceSection";
+export { PortfolioListItem } from "./PortfolioListItem";
+export { PortfolioSpecItem } from "./PortfolioSpecItem";

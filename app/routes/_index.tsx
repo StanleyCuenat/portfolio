@@ -76,7 +76,7 @@ export default function Index() {
             <System.Typography
               type={System.TYPOGRAPHY.CONTENT}
               color={System.COLORS.BLACK}
-              weight={FONT_WEIGHT.REGULAR}
+              weight={FONT_WEIGHT.LIGHT}
               className="max-w-[600px]"
             >
               Web & mobile engineer enjoying Functional programming with{" "}
@@ -243,7 +243,7 @@ export default function Index() {
             <System.Typography
               type={System.TYPOGRAPHY.CONTENT}
               color={System.COLORS.GREY}
-              weight={FONT_WEIGHT.REGULAR}
+              weight={FONT_WEIGHT.LIGHT}
               className="max-w-[600px]"
             >
               Building trust with my clients is fundamental to my approach. I
@@ -290,7 +290,7 @@ export default function Index() {
             <System.Typography
               type={System.TYPOGRAPHY.CONTENT}
               color={System.COLORS.GREY}
-              weight={FONT_WEIGHT.REGULAR}
+              weight={FONT_WEIGHT.LIGHT}
               className="max-w-[600px]"
             >
               Below is a curated list of the frameworks, tools, and technologies
@@ -365,7 +365,7 @@ export default function Index() {
               <System.Typography
                 type={System.TYPOGRAPHY.CONTENT}
                 color={System.COLORS.GREY}
-                weight={FONT_WEIGHT.REGULAR}
+                weight={FONT_WEIGHT.LIGHT}
               >
                 I am a French full-stack engineer based in Seoul, South Korea,
                 with a Master’s degree in Computer Science and over six years of
