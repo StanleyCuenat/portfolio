@@ -42,7 +42,7 @@ export const PortfolioListItem = (props: PortfolioItemProps) => {
             {props.portfolio.intro}
           </System.Typography>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-4">
           <PortfolioSpecItem title="Client" content={props.portfolio.title} />
           <PortfolioSpecItem title="Work type" content={props.portfolio.type} />
           <PortfolioSpecItem title="Dates" content={props.portfolio.date} />
@@ -72,18 +72,27 @@ export const PortfolioListItem = (props: PortfolioItemProps) => {
             <System.Button color={COLORS.BLACK}>View detail</System.Button>
           </Link>
         </div>
-        <div className="flex flex-row flex-wrap gap-2">
-          {props.portfolio.technologies.map((tech) => (
-            <System.Typography
-              key={tech}
-              type={System.TYPOGRAPHY.SMALL}
-              color={System.COLORS.BLACK}
-              weight={FONT_WEIGHT.REGULAR}
-              className="flex items-center border border-main-black rounded-full px-3 py-1"
-            >
-              {tech}
-            </System.Typography>
-          ))}
+        <div className="flex flex-col gap-2">
+          <System.Typography
+            type={System.TYPOGRAPHY.CONTENT}
+            color={System.COLORS.GREY}
+            weight={FONT_WEIGHT.REGULAR}
+          >
+            Technical stack
+          </System.Typography>
+          <div className="flex flex-row flex-wrap gap-2">
+            {props.portfolio.technologies.map((tech) => (
+              <System.Typography
+                key={tech}
+                type={System.TYPOGRAPHY.SMALL}
+                color={System.COLORS.BLACK}
+                weight={FONT_WEIGHT.REGULAR}
+                className="flex items-center border border-main-black rounded-full px-3 py-1"
+              >
+                {tech}
+              </System.Typography>
+            ))}
+          </div>
         </div>
       </div>
     </motion.section>

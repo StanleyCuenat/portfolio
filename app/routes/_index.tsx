@@ -49,7 +49,7 @@ export default function Index() {
   return (
     <div className="w-screen">
       <div className="flex flex-col z-10">
-        <header className="flex flex-row px-4  md:px-6 lg:px-52 2xl:px-96 py-12 md:py-20">
+        <header className="flex flex-row px-4  md:px-6 xl:px-52 2xl:px-96 py-12 md:py-20">
           <div className="flex flex-col gap-7">
             <div className="flex flex-col gap-2">
               <System.Typography
@@ -337,6 +337,7 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 z-10">
             {portfolioList.map((portfolio) => (
               <PortfolioCard
+                id={portfolio.id}
                 date={portfolio.date}
                 description={portfolio.description}
                 key={portfolio.id}
