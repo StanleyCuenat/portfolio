@@ -72,7 +72,7 @@ const PortfolioDetail = () => {
             <PortfolioSpecItem title="Work type" content={portfolio.type} />
             <PortfolioSpecItem title="Dates" content={portfolio.date} />
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
             <System.Typography
               type={System.TYPOGRAPHY.CONTENT}
               color={System.COLORS.GREY}
@@ -110,15 +110,33 @@ const PortfolioDetail = () => {
             color={System.COLORS.BLACK}
             weight={FONT_WEIGHT.REGULAR}
           >
-            {"Challenge & Work"}
+            {"Challenge"}
           </System.Typography>
           <System.Typography
             className="whitespace-pre-wrap"
             type={System.TYPOGRAPHY.CONTENT}
-            color={System.COLORS.GREY}
+            color={System.COLORS.BLACK}
             weight={FONT_WEIGHT.LIGHT}
           >
             {portfolio.challenge}
+          </System.Typography>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <System.Typography
+            type={System.TYPOGRAPHY.H3}
+            color={System.COLORS.BLACK}
+            weight={FONT_WEIGHT.REGULAR}
+          >
+            {"Work"}
+          </System.Typography>
+          <System.Typography
+            className="whitespace-pre-wrap"
+            type={System.TYPOGRAPHY.CONTENT}
+            color={System.COLORS.BLACK}
+            weight={FONT_WEIGHT.LIGHT}
+          >
+            {portfolio.work}
           </System.Typography>
         </div>
         <div className="flex flex-col gap-6">
@@ -129,14 +147,21 @@ const PortfolioDetail = () => {
           >
             Result and impact
           </System.Typography>
-          <System.Typography
-            className="whitespace-pre-wrap "
-            type={System.TYPOGRAPHY.CONTENT}
-            color={System.COLORS.GREY}
-            weight={FONT_WEIGHT.LIGHT}
-          >
-            {portfolio.challenge}
-          </System.Typography>
+          <ul className="list-disc ml-4">
+            {portfolio.result.map((res) => (
+              <li className="mb-2">
+                <System.Typography
+                  key={res}
+                  className="whitespace-pre-wrap "
+                  type={System.TYPOGRAPHY.CONTENT}
+                  color={System.COLORS.BLACK}
+                  weight={FONT_WEIGHT.LIGHT}
+                >
+                  {res}
+                </System.Typography>
+              </li>
+            ))}
+          </ul>
         </div>
       </HomeSection>
     </div>

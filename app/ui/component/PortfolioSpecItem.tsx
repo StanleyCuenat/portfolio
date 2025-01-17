@@ -6,7 +6,7 @@ export const PortfolioSpecItem = (props: {
   content: string;
 }) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap">
       <System.Typography
         type={System.TYPOGRAPHY.CONTENT}
         color={System.COLORS.GREY}
